@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "876118172396",
+    "project_id": "comexamplehealthapp",
+    "storage_bucket": "comexamplehealthapp.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:876118172396:android:53f7c39818880b7fb7bbc9",
+        "android_client_info": {
+          "package_name": "com.example.healthapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCYl1vH2d0BlMXdZQUj2QVl9EokhRLSrSk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

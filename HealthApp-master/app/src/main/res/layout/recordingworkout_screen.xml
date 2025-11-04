@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/margin_medium">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_menu"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginTop="8dp"
+        android:background="?attr/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:menu="@menu/toolbar_menu"
+        app:title="Workout Record"
+        app:titleTextColor="@android:color/white" />
+
+    <TextView
+        android:id="@+id/heart_rate_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Heart Rate:\n -- BPM"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.36"
+        app:layout_constraintStart_toEndOf="@+id/stop_button"
+        app:layout_constraintTop_toBottomOf="@id/timer_text" />
+
+                <!-- Duration Time Section -->
+
+    <TextView
+        android:id="@+id/duration_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="100dp"
+        android:text="Duration time:"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+                android:id="@+id/timer_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_small"
+                android:text="00:00:00"
+                android:textSize="30sp"
+                app:layout_constraintStart_toEndOf="@id/duration_label"
+                app:layout_constraintTop_toTopOf="@id/duration_label" />
+
+    <Button
+        android:id="@+id/start_button"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/button_height"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="24dp"
+        android:text="Start"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/duration_label" />
+
+    <Button
+                android:id="@+id/stop_button"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginTop="24dp"
+                android:text="Stop"
+                app:layout_constraintStart_toEndOf="@id/start_button"
+                app:layout_constraintTop_toBottomOf="@id/duration_label" />
+
+            <!-- Workout Selection Section -->
+            <LinearLayout
+                android:id="@+id/workout_sets_container"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/start_button"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="24dp">
+
+                <!-- Initial Workout Set -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <Spinner
+                        android:id="@+id/workout_type_spinner_0"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:entries="@array/workout_types"
+                        android:spinnerMode="dropdown" />
+
+                    <Spinner
+                        android:id="@+id/repetition_spinner_0"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1"
+                        android:entries="@array/repetitions"
+                        android:spinnerMode="dropdown" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Add Button -->
+
+    <!-- Mood Section -->
+    <Button
+        android:id="@+id/add_button"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/button_height"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Add"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/workout_sets_container" />
+
+    <TextView
+                android:id="@+id/mood_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mood:"
+                android:textSize="@dimen/text_size_normal"
+                app:layout_constraintBottom_toTopOf="@id/mood_happy"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginBottom="8dp" />
+
+    <ImageView
+        android:id="@+id/mood_happy"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/happy_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageView
+                android:id="@+id/mood_neutral"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/neutral_icon"
+                app:layout_constraintBottom_toBottomOf="@id/mood_happy"
+                app:layout_constraintStart_toEndOf="@id/mood_happy"
+                android:layout_marginStart="8dp" />
+
+            <ImageView
+                android:id="@+id/mood_sad"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/bad_icon"
+                app:layout_constraintBottom_toBottomOf="@id/mood_happy"
+                app:layout_constraintStart_toEndOf="@id/mood_neutral"
+                android:layout_marginStart="8dp" />
+
+            <!-- Back and Submit Buttons -->
+            <Button
+                android:id="@+id/back_button"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginBottom="@dimen/margin_medium"
+                android:text="Back"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/submit_button" />
+
+            <Button
+                android:id="@+id/submit_button"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/button_height"
+                android:text="Submit"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginBottom="@dimen/margin_medium"
+                android:layout_marginEnd="@dimen/margin_medium" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>

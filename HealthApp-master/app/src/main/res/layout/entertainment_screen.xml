@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/margin_medium">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_menu"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:title="Entertainment"
+        app:titleTextColor="@android:color/white"
+        app:menu="@menu/toolbar_menu"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Top Title: Entertainment Programme -->
+    <TextView
+        android:id="@+id/entertainment_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Entertainment Programme"
+        android:textSize="@dimen/text_size_title"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_menu"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/margin_large"/>
+
+    <!-- Triathlon Text -->
+    <TextView
+        android:id="@+id/triathlon_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Triathlon"
+        android:textSize="@dimen/text_size_normal"
+        app:layout_constraintTop_toBottomOf="@id/entertainment_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/margin_medium"/>
+
+    <!-- Running Icon and Caption -->
+    <ImageView
+        android:id="@+id/running_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/running_icon"
+        app:layout_constraintTop_toBottomOf="@id/triathlon_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/cycling_icon"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginEnd="@dimen/margin_small"/>
+
+    <TextView
+        android:id="@+id/running_caption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="15mins"
+        android:textSize="@dimen/text_size_normal"
+        app:layout_constraintTop_toBottomOf="@id/running_icon"
+        app:layout_constraintStart_toStartOf="@id/running_icon"
+        app:layout_constraintEnd_toEndOf="@id/running_icon"
+        android:layout_marginTop="@dimen/margin_small"/>
+
+    <!-- Cycling Icon and Caption -->
+    <ImageView
+        android:id="@+id/cycling_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/cycling_icon"
+        app:layout_constraintTop_toBottomOf="@id/triathlon_text"
+        app:layout_constraintStart_toEndOf="@id/running_icon"
+        app:layout_constraintEnd_toStartOf="@id/swimming_icon"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/margin_small"/>
+
+    <TextView
+        android:id="@+id/cycling_caption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="15mins"
+        android:textSize="@dimen/text_size_normal"
+        app:layout_constraintTop_toBottomOf="@id/cycling_icon"
+        app:layout_constraintStart_toStartOf="@id/cycling_icon"
+        app:layout_constraintEnd_toEndOf="@id/cycling_icon"
+        android:layout_marginTop="@dimen/margin_small"/>
+
+    <!-- Swimming Icon and Caption -->
+    <ImageView
+        android:id="@+id/swimming_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/swimming_icon"
+        app:layout_constraintTop_toBottomOf="@id/triathlon_text"
+        app:layout_constraintStart_toEndOf="@id/cycling_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginStart="@dimen/margin_small"/>
+
+    <TextView
+        android:id="@+id/swimming_caption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="15mins"
+        android:textSize="@dimen/text_size_normal"
+        app:layout_constraintTop_toBottomOf="@id/swimming_icon"
+        app:layout_constraintStart_toStartOf="@id/swimming_icon"
+        app:layout_constraintEnd_toEndOf="@id/swimming_icon"
+        android:layout_marginTop="@dimen/margin_small"/>
+
+    <!-- Description Text -->
+    <TextView
+        android:id="@+id/description_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Playing in different dimensions."
+        android:textSize="@dimen/text_size_normal"
+        app:layout_constraintTop_toBottomOf="@id/running_caption"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/margin_medium"/>
+
+    <!-- Back Button -->
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/button_height"
+        android:text="Back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/startButton"
+        android:layout_marginBottom="@dimen/margin_medium"
+        android:layout_marginEnd="@dimen/margin_small"/>
+
+    <!-- Start Button -->
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/button_height"
+        android:text="Start"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="@dimen/margin_medium"
+        android:layout_marginEnd="@dimen/margin_medium"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

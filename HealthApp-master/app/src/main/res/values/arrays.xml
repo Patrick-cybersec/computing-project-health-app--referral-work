@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="sex_options">
+        <item>Select Sex</item>
+        <item>Male</item>
+        <item>Female</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="workout_types">
+        <item>Select exercise</item>
+        <item>Sit-up</item>
+        <item>Push-up</item>
+        <item>High bar</item>
+        <item>Parallel bar</item>
+        <item>Pull-up</item>
+    </string-array>
+
+    <string-array name="repetitions">
+        <item>Select repetition</item>
+        <item>0</item>
+        <item>5</item>
+        <item>10</item>
+        <item>15</item>
+        <item>20</item>
+        <item>25</item>
+        <item>30</item>
+        <item>35</item>
+        <item>40</item>
+        <item>45</item>
+        <item>50</item>
+    </string-array>
+
+    <string-array name="noofsets">
+        <item>Select no. of set</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+
+    <string-array name="skippingballyoga_types">
+        <item>Select sport</item>
+        <item>Yoga</item>
+        <item>Skipping</item>
+        <item>Basketball</item>
+        <item>Football</item>
+        <item>Volleyball</item>
+        <item>Badminton</item>
+        <item>Table tennis</item>
+        <item>Tennis</item>
+    </string-array>
+
+    <string-array name="cyclingclimbingrunning_types">
+        <item>Select exercise</item>
+        <item>Cycling</item>
+        <item>Climbing</item>
+        <item>Running</item>
+    </string-array>
+
+    <string-array name="swimming_types">
+        <item>Select Style</item>
+        <item>Freestyle</item>
+        <item>Backstroke</item>
+        <item>Breaststroke</item>
+        <item>Butterfly</item>
+    </string-array>
+
+    <array name="admin_options">
+        <item>No</item>
+        <item>Yes</item>
+    </array>
+
+    <string-array name="rehabilitation">
+        <item>Select position</item>
+        <item>Leg</item>
+        <item>Core</item>
+        <item>Arm</item>
+    </string-array>
+</resources>

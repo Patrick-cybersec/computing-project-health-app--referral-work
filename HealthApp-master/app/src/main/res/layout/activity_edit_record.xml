@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edit Activity Record"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/admin_auth_fields"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="16dp">
+
+        <EditText
+            android:id="@+id/admin_id_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/admin_id_prompt"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/admin_password_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="@string/admin_password_prompt"
+            android:inputType="textPassword" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/user_id_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="User ID"
+        android:inputType="text"
+        android:enabled="false" />
+
+    <Spinner
+        android:id="@+id/activity_type_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:prompt="@string/exercise_type_prompt"
+        android:entries="@array/activity_types" />
+
+    <Spinner
+        android:id="@+id/exercise_type_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:prompt="@string/exercise_type_prompt" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp">
+
+        <Spinner
+            android:id="@+id/repetitions_spinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:prompt="@string/repetitions_prompt"
+            android:entries="@array/repetitions" />
+
+        <Spinner
+            android:id="@+id/sets_spinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:prompt="@string/sets_prompt"
+            android:entries="@array/noofsets" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/add_exercise_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Add Exercise" />
+
+    <EditText
+        android:id="@+id/exercises_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="Exercises (e.g., Sit-up: Repetitions 15 repetitions)"
+        android:inputType="textMultiLine"
+        android:minLines="3"
+        android:enabled="false" />
+
+    <EditText
+        android:id="@+id/heart_rate_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="@string/heart_rate_prompt"
+        android:inputType="numberDecimal" />
+
+    <Spinner
+        android:id="@+id/mood_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:prompt="@string/mood_prompt"
+        android:entries="@array/mood_options" />
+
+    <EditText
+        android:id="@+id/duration_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="@string/duration_prompt"
+        android:inputType="text" />
+
+    <LinearLayout
+        android:id="@+id/admin_controls"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp">
+
+        <Button
+            android:id="@+id/save_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/save_button" />
+
+        <Button
+            android:id="@+id/delete_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/delete_button" />
+    </LinearLayout>
+
+</LinearLayout>
