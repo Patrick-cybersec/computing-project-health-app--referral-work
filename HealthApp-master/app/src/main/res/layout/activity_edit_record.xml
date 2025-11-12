@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edit Activity Record"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#2E7D32" />
+
+    <!-- SAME AS activity_add_record.xml FROM HERE ↓ -->
+    <EditText
+        android:id="@+id/user_id_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="User ID (required)"
+        android:inputType="text" />
+
+    <Spinner
+        android:id="@+id/activity_type_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:entries="@array/activity_types" />
+
+    <Spinner
+        android:id="@+id/exercise_type_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp">
+
+        <Spinner
+            android:id="@+id/repetitions_spinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:entries="@array/repetitions" />
+
+        <Spinner
+            android:id="@+id/sets_spinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:entries="@array/noofsets" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/add_exercise_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Add Exercise"
+        android:backgroundTint="#4CAF50"
+        android:textColor="@android:color/white" />
+
+    <EditText
+        android:id="@+id/exercises_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="8dp"
+        android:hint="Exercises will appear here..."
+        android:gravity="top|start"
+        android:inputType="textMultiLine"
+        android:enabled="false"
+        android:background="@android:drawable/editbox_background" />
+
+    <EditText
+        android:id="@+id/duration_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Duration (HH:MM:SS) - required"
+        android:inputType="text" />
+
+    <Spinner
+        android:id="@+id/mood_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:entries="@array/mood_options" />
+
+    <EditText
+        android:id="@+id/heart_rate_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Heart Rate (optional)"
+        android:inputType="numberDecimal" />
+
+    <Button
+        android:id="@+id/save_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Update Record"
+        android:backgroundTint="#2E7D32"
+        android:textColor="@android:color/white" />
+
+</LinearLayout>

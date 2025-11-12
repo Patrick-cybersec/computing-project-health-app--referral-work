@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/margin_medium">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+
+        android:id="@+id/toolbar_menu"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:title="Activities tutorial"
+        app:titleTextColor="@android:color/white"
+        app:menu="@menu/toolbar_menu"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Top Title: Aerobic Activities -->
+
+            <!-- Row 1: Ball and Gym Buttons -->
+            <Button
+                android:id="@+id/tutorialballButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_small"
+                android:drawableTop="@drawable/ball_icon"
+                android:padding="@dimen/margin_small"
+                android:text="Ball"
+                app:layout_constraintEnd_toStartOf="@id/tutorialrunningButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.4" />
+
+            <Button
+                android:id="@+id/tutorialrunningButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_small"
+                android:drawableTop="@drawable/running_icon"
+                android:padding="@dimen/margin_small"
+                android:text="Running"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tutorialballButton"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.4" />
+
+            <!-- Row 2: Sprint and Weightlifting Buttons -->
+
+            <Button
+                android:id="@+id/tutorialswimmingButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_small"
+                android:drawableTop="@drawable/swimming_icon"
+                android:padding="@dimen/margin_small"
+                android:text="Swimming"
+                app:layout_constraintEnd_toStartOf="@id/tutorialcyclingButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tutorialballButton"
+                app:layout_constraintWidth_percent="0.4" />
+
+            <!-- Row 3: Workout and Yoga Buttons -->
+            <Button
+                android:id="@+id/tutorialcyclingButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_small"
+                android:drawableTop="@drawable/cycling_icon"
+                android:padding="@dimen/margin_small"
+                android:text="Cycling"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tutorialswimmingButton"
+                app:layout_constraintTop_toBottomOf="@+id/tutorialrunningButton"
+                app:layout_constraintWidth_percent="0.4" />
+
+            <!-- Back Button -->
+
+            <Button
+                android:id="@+id/tutorialskippingButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_small"
+                android:drawableTop="@drawable/skipping_icon"
+                android:padding="@dimen/margin_small"
+                android:text="Skipping"
+                app:layout_constraintEnd_toStartOf="@id/tutorialyogaButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tutorialswimmingButton"
+                app:layout_constraintWidth_percent="0.4" />
+
+            <Button
+                android:id="@+id/tutorialyogaButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_small"
+                android:drawableTop="@drawable/yoga_icon"
+                android:padding="@dimen/margin_small"
+                android:text="Yoga"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tutorialskippingButton"
+                app:layout_constraintTop_toBottomOf="@+id/tutorialcyclingButton"
+                app:layout_constraintWidth_percent="0.4" />
+
+            <Button
+                android:id="@+id/tutorialsprintButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_small"
+                android:drawableTop="@drawable/sprint_icon"
+                android:padding="@dimen/margin_small"
+                android:text="Sprint"
+                app:layout_constraintEnd_toStartOf="@id/tutorialweightliftingButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tutorialskippingButton"
+                app:layout_constraintWidth_percent="0.4" />
+
+            <!-- Row 3: Workout and Yoga Buttons -->
+            <Button
+                android:id="@+id/tutorialweightliftingButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_small"
+                android:drawableTop="@drawable/weightlift_icon"
+                android:padding="@dimen/margin_small"
+                android:text="Weightlifting"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tutorialsprintButton"
+                app:layout_constraintTop_toBottomOf="@+id/tutorialyogaButton"
+                app:layout_constraintWidth_percent="0.4" />
+
+            <Button
+                android:id="@+id/tutorialworkoutButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_small"
+                android:drawableTop="@drawable/workout_icon"
+                android:padding="@dimen/margin_small"
+                android:text="Workout"
+                app:layout_constraintEnd_toStartOf="@id/tutorialclimbingButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tutorialsprintButton"
+                app:layout_constraintWidth_percent="0.4" />
+
+            <Button
+                android:id="@+id/tutorialclimbingButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_small"
+                android:drawableTop="@drawable/climbing_icon"
+                android:padding="@dimen/margin_small"
+                android:text="Climbing"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tutorialworkoutButton"
+                app:layout_constraintTop_toBottomOf="@+id/tutorialweightliftingButton"
+                app:layout_constraintWidth_percent="0.4" />
+
+            <Button
+                android:id="@+id/tutorialgymButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:drawableTop="@drawable/gymming_icon"
+                android:text="Gym"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tutorialworkoutButton"
+                app:layout_constraintWidth_percent="0.4" />
+
+            <Button
+                android:id="@+id/tutorialbackButton"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/button_height"
+                android:text="Back"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginBottom="@dimen/margin_medium"
+                android:layout_marginEnd="@dimen/margin_medium"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
