@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/margin_medium">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_menu"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:title="Rehabilitation"
+        app:titleTextColor="@android:color/white"
+        app:menu="@menu/toolbar_menu"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Top Title: Keep-fit Programme -->
+    <TextView
+        android:id="@+id/rehabilitationprogramme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rehabilitation Programme"
+        android:textSize="@dimen/text_size_normal"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_menu"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/margin_medium"/>
+
+    <!-- HIIT Text -->
+    <TextView
+        android:id="@+id/forleg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="For leg:"
+        android:textSize="@dimen/text_size_normal"
+        app:layout_constraintTop_toBottomOf="@id/rehabilitationprogramme"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="50dp"/>
+
+    <TextView
+        android:id="@+id/forcore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="For core:"
+        android:textSize="@dimen/text_size_normal"
+        app:layout_constraintTop_toBottomOf="@id/forleg"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="100dp"/>
+
+    <TextView
+        android:id="@+id/forearm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="For arm:"
+        android:textSize="@dimen/text_size_normal"
+        app:layout_constraintTop_toBottomOf="@id/forcore"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="100dp"/>
+
+    <!-- Exercise Buttons -->
+    <Button
+        android:id="@+id/squat_icon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:drawableTop="@drawable/squat_icon"
+        android:padding="@dimen/margin_small"
+        android:text="Squats"
+        app:layout_constraintStart_toEndOf="@+id/forleg"
+        app:layout_constraintTop_toTopOf="@+id/forleg"
+        app:layout_constraintWidth_percent="0.4" />
+
+    <Button
+        android:id="@+id/calvesraise_icon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:drawableTop="@drawable/calvesraise_icon"
+        android:padding="@dimen/margin_small"
+        android:text="Calves Raise"
+        app:layout_constraintStart_toEndOf="@+id/squat_icon"
+        app:layout_constraintTop_toTopOf="@+id/forleg"
+        app:layout_constraintWidth_percent="0.4" />
+
+    <Button
+        android:id="@+id/armlifts_icon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:drawableTop="@drawable/armlifts_icon"
+        android:padding="@dimen/margin_small"
+        android:text="Arm Lifts"
+        app:layout_constraintStart_toEndOf="@+id/forcore"
+        app:layout_constraintTop_toTopOf="@+id/forcore"
+        app:layout_constraintWidth_percent="0.4" />
+
+    <Button
+        android:id="@+id/shoulderbridge_icon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:drawableTop="@drawable/shoulderbridge_icon"
+        android:padding="@dimen/margin_small"
+        android:text="Shoulder Bridge"
+        app:layout_constraintStart_toEndOf="@+id/armlifts_icon"
+        app:layout_constraintTop_toTopOf="@+id/forcore"
+        app:layout_constraintWidth_percent="0.4" />
+
+    <Button
+        android:id="@+id/tricepstretch_icon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:drawableTop="@drawable/tricepstretch_icon"
+        android:padding="@dimen/margin_small"
+        android:text="Tricep Stretch"
+        app:layout_constraintStart_toEndOf="@+id/forearm"
+        app:layout_constraintTop_toTopOf="@+id/forearm"
+        app:layout_constraintWidth_percent="0.4" />
+
+    <Button
+        android:id="@+id/forearmstretch_icon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:drawableTop="@drawable/forearmstretch_icon"
+        android:padding="@dimen/margin_small"
+        android:text="Forearm Stretch"
+        app:layout_constraintStart_toEndOf="@+id/tricepstretch_icon"
+        app:layout_constraintTop_toTopOf="@+id/forearm"
+        app:layout_constraintWidth_percent="0.4" />
+
+    <!-- Description Text -->
+    <TextView
+        android:id="@+id/description_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="**Do it slowly!**"
+        android:textSize="40sp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/startButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Back Button -->
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/button_height"
+        android:text="Back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/startButton"
+        android:layout_marginBottom="@dimen/margin_medium"
+        android:layout_marginEnd="@dimen/margin_small"/>
+
+    <!-- Video Buttons -->
+    <Button
+        android:id="@+id/videoButton1"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/button_height"
+        android:text="Video"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/calvesraise_icon"
+        android:layout_marginEnd="@dimen/margin_small" />
+
+    <Button
+        android:id="@+id/videoButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/button_height"
+        android:text="Video"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/shoulderbridge_icon"
+        android:layout_marginEnd="@dimen/margin_small" />
+
+    <Button
+        android:id="@+id/videoButton3"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/button_height"
+        android:text="Video"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/forearmstretch_icon"
+        android:layout_marginEnd="@dimen/margin_small" />
+
+    <!-- Start Button -->
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/button_height"
+        android:text="Start"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="@dimen/margin_medium"
+        android:layout_marginEnd="@dimen/margin_medium"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

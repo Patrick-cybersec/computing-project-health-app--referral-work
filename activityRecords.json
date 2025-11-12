@@ -1,0 +1,122 @@
+[
+  {
+    "UserId": "admin",
+    "ActivityType": "Skipping",
+    "HeartRate": 0,
+    "Mood": "Sad",
+    "Duration": "00:00:03",
+    "Exercises": "Skipping: Type Skipping style",
+    "id": 2,
+    "created_At": "2025-11-05T14:48:47.394Z",
+    "userId": "admin",
+    "activityType": "Skipping",
+    "mood": "Sad"
+  },
+  {
+    "UserId": "patrick",
+    "ActivityType": "Gym",
+    "HeartRate": 0,
+    "Mood": "Neutral",
+    "Duration": "00:05:00",
+    "Exercises": "High bar: Repetitions 30 repetitions",
+    "id": 7,
+    "created_At": "2025-11-10T12:24:02.069Z",
+    "userId": "patrick",
+    "activityType": "Gym",
+    "mood": "Neutral"
+  },
+  {
+    "UserId": "admin",
+    "ActivityType": "Sprint",
+    "HeartRate": 0,
+    "Mood": "Happy",
+    "Duration": "00:01:00",
+    "Exercises": "Running: Repetitions 40 repetitions",
+    "id": 9,
+    "created_At": "2025-11-10T13:07:11.674Z",
+    "userId": "admin",
+    "activityType": "Sprint",
+    "mood": "Happy"
+  },
+  {
+    "UserId": "admin",
+    "ActivityType": "Cycling",
+    "HeartRate": 0,
+    "Mood": "Happy",
+    "Duration": "00:00:50",
+    "Exercises": "Climbing: Repetitions 25 repetitions",
+    "id": 10,
+    "created_At": "2025-11-11T09:15:37.489Z",
+    "userId": "admin",
+    "activityType": "Cycling",
+    "mood": "Happy"
+  },
+  {
+    "UserId": "admin",
+    "ActivityType": "Gym",
+    "HeartRate": 0,
+    "Mood": "Happy",
+    "Duration": "00:00:13",
+    "Exercises": "[{\"Name\":\"Weight Lifting\",\"Type\":\"Weight\",\"Location\":\"50.0kg\",\"Details\":\"50 reps\"}]",
+    "id": 17,
+    "created_At": "2025-11-12T03:37:18.438Z",
+    "userId": "admin",
+    "activityType": "Gym",
+    "mood": "Neutral",
+    "duration": "00:00:13",
+    "exercises": "[{\"Name\":\"Weight Lifting\",\"Type\":\"Weight\",\"Location\":\"50.0kg\",\"Details\":\"50 reps\"}]"
+  },
+  {
+    "UserId": "admin",
+    "ActivityType": "Ball",
+    "HeartRate": 0,
+    "Mood": "Happy",
+    "Duration": "00:00:19",
+    "Exercises": "[{\"Name\":\"Basketball\",\"Type\":\"Ball\",\"Location\":\"Indoor\\/Outdoor\",\"Details\":\"\"},{\"Name\":\"Volleyball\",\"Type\":\"Ball\",\"Location\":\"Indoor\\/Outdoor\",\"Details\":\"\"}]",
+    "id": 18,
+    "created_At": "2025-11-12T03:56:05.632Z",
+    "userId": "admin",
+    "activityType": "Ball",
+    "mood": "Happy"
+  },
+  {
+    "id": 20,
+    "userId": "12345",
+    "activityType": "Swimming",
+    "mood": "Neutral",
+    "duration": "00:00:15",
+    "exercises": "[{\"Name\":\"Swimming\",\"Type\":\"Swimming\",\"Location\":\"Pool\",\"Details\":\"Backstroke\"},{\"Name\":\"Swimming\",\"Type\":\"Swimming\",\"Location\":\"Pool\",\"Details\":\"Freestyle\"}]",
+    "heartRate": 0,
+    "created_At": "2025-11-12T05:08:44.737Z"
+  },
+  {
+    "id": 21,
+    "userId": "12345",
+    "activityType": "Skipping",
+    "mood": "Neutral",
+    "duration": "00:00:03",
+    "exercises": "[{\"Name\":\"Skipping\",\"Type\":\"Skipping\",\"Location\":\"Indoor\\/Outdoor\",\"Details\":\"\"}]",
+    "heartRate": 0,
+    "created_At": "2025-11-12T15:07:02.796Z"
+  },
+  {
+    "id": 22,
+    "userId": "peter",
+    "activityType": "Running",
+    "mood": "Sad",
+    "duration": "00:00:08",
+    "exercises": "[{\"Name\":\"Running\",\"Type\":\"Type\",\"Location\":\"Outdoor\",\"Details\":\"style\"}]",
+    "heartRate": 0,
+    "created_At": "2025-11-12T15:44:08.935Z"
+  },
+  {
+    "id": 23,
+    "userId": "peter",
+    "activityType": "Running",
+    "mood": "Neutral",
+    "duration": "00:00:01",
+    "exercises": "[{\"Name\":\"Running\",\"Type\":\"Type\",\"Location\":\"Outdoor\",\"Details\":\"style\"}]",
+    "heartRate": 0,
+    "created_At": "2025-11-12T15:45:35.832Z"
+  }
+]

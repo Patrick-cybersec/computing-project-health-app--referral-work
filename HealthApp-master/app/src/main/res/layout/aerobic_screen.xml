@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/margin_medium">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_menu"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:title="Aerobic"
+        app:titleTextColor="@android:color/white"
+        app:menu="@menu/toolbar_menu"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Top Title: Aerobic Activities -->
+    <TextView
+        android:id="@+id/aerobic_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Aerobic Activities"
+        android:textSize="@dimen/text_size_title"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_menu"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/margin_large"/>
+
+    <!-- Row 1: Ball and Gym Buttons -->
+    <Button
+        android:id="@+id/aerobicballButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginEnd="@dimen/margin_small"
+        android:drawableTop="@drawable/ball_icon"
+        android:padding="@dimen/margin_small"
+        android:text="Ball"
+        app:layout_constraintEnd_toStartOf="@id/runningButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/aerobic_title"
+        app:layout_constraintWidth_percent="0.4" />
+
+    <Button
+        android:id="@+id/runningButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Running"
+        android:drawableTop="@drawable/running_icon"
+        android:padding="@dimen/margin_small"
+        app:layout_constraintWidth_percent="0.4"
+        app:layout_constraintTop_toBottomOf="@id/aerobic_title"
+        app:layout_constraintStart_toEndOf="@id/aerobicballButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginStart="@dimen/margin_small"/>
+
+    <!-- Row 2: Sprint and Weightlifting Buttons -->
+
+    <Button
+        android:id="@+id/swimmingButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_small"
+        android:drawableTop="@drawable/swimming_icon"
+        android:padding="@dimen/margin_small"
+        android:text="Swimming"
+        app:layout_constraintEnd_toStartOf="@id/cyclingButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/aerobicballButton"
+        app:layout_constraintWidth_percent="0.4" />
+
+    <!-- Row 3: Workout and Yoga Buttons -->
+    <Button
+        android:id="@+id/cyclingButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_small"
+        android:drawableTop="@drawable/cycling_icon"
+        android:padding="@dimen/margin_small"
+        android:text="Cycling"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/swimmingButton"
+        app:layout_constraintTop_toBottomOf="@+id/runningButton"
+        app:layout_constraintWidth_percent="0.4" />
+
+    <Button
+        android:id="@+id/skippingButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_small"
+        android:drawableTop="@drawable/skipping_icon"
+        android:padding="@dimen/margin_small"
+        android:text="Skipping"
+        app:layout_constraintEnd_toStartOf="@id/yogaButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/swimmingButton"
+        app:layout_constraintWidth_percent="0.4" />
+
+    <!-- Back Button -->
+
+    <Button
+        android:id="@+id/yogaButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_small"
+        android:drawableTop="@drawable/yoga_icon"
+        android:padding="@dimen/margin_small"
+        android:text="Yoga"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/skippingButton"
+        app:layout_constraintTop_toBottomOf="@+id/cyclingButton"
+        app:layout_constraintWidth_percent="0.4" />
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/button_height"
+        android:text="Back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="@dimen/margin_medium"
+        android:layout_marginEnd="@dimen/margin_medium"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

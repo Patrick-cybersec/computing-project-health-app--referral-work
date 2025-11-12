@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">HealthApp</string>
+    <string name="exercise_type_prompt">Activity Type</string>
+    <string name="repetitions_prompt">Repetitions</string>
+    <string name="sets_prompt">Sets</string>
+    <string name="duration_prompt">Duration (HH:MM:SS)</string>
+    <string name="heart_rate_prompt">Heart Rate (bpm)</string>
+    <string name="mood_prompt">Mood</string>
+    <string name="admin_id_prompt">Admin ID</string>
+    <string name="admin_password_prompt">Admin Password</string>
+    <string name="save_button">Save</string>
+    <string name="delete_button">Delete</string>
+    <string name="select_activity_prompt">Choose the activity type</string>
+
+    <string-array name="mood_options">
+        <item>Select Mood</item>
+        <item>Happy</item>
+        <item>Neutral</item>
+        <item>Sad</item>
+    </string-array>
+
+</resources>
